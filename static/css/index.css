@@ -6,6 +6,11 @@ h1{
     padding:0;
     color:white;
 }
+
+h2{
+    font-family: 'Press Start', sans-serif;
+}
+
 .header{
     height:140px;
     background-image: url('../images/kingkong.webp');
@@ -13,7 +18,7 @@ h1{
     background-position:center;
     background-repeat: no-repeat;
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
+    justify-content: center;
     align-items: center;
 }
 
@@ -32,9 +37,55 @@ body{
 
 .main-container{
     display:grid;
-
+    grid-template-columns: repeat (3,1fr); /*3 columnas*/
+    grid-template-rows: repeat (3,3fr);
+    grid-gap: 10px;
+    box-sizing: border-box; /*responsive*/
+    justify-items: center;
+    align-items: center;
 }
 
 footer{
+    height:70px;
+    background-image: url('../images/kingkong.webp'); /*temporal */
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:auto;
+}
 
+.dark-mode{
+    width:80px;
+    display:grid;
+
+}
+
+.dark-mode:hover{
+    background-color: black;
+    color:white;
+}
+
+.top-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-index{
+    display:none; /*ocultar sidebar por defecto*/
+    width:100px;
+    height:500px;
+    background-color: red;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.sidebar-index:hover{
+    display:block;
 }
