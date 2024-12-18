@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #1a1a2e;
+    color: white;
+}
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+header {
+    display: flex;
+    justify-content: space-between; /* Distribuye a izquierda y derecha */
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #16213e;
+}
+body.light-mode header {
+    background-color: #f0f0f0;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Alinea los enlaces a la derecha */
+    gap: 1rem; /* Espacio entre los enlaces */
+}
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+body.light-mode header a {
+    color: black;
+}
+#retrobyte {
+    cursor: pointer;
+}
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 1rem;
+}
+.nav-icons .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #0f3460;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+body.light-mode .nav-icons .icon {
+    background-color: #cccccc;
+}
+.search-section {
+    margin: 2rem auto;
+    max-width: 800px;
+    position: relative;
+}
+.background-image {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+body.light-mode .background-image {
+    color: black;
+}
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    border-radius: 10px;
+}
+.search-bar {
+    margin-top: 1rem;
+}
+.search-bar input {
+    width: 70%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+.search-bar button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #0f3460;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.search-bar button:hover {
+    background-color: #53354a;
+}
+.explore-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.explore-section button {
+    margin: 0 1rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #53354a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+body.light-mode .explore-section button {
+    color: black;
+    background-color: #e0e0e0;
+}
+.explore-section button:hover {
+    background-color: #903749;
+}
+body.light-mode .explore-section button:hover {
+    background-color: #c0c0c0;
+}
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+.image-gallery img {
+    width: 250px; 
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Styles for additional content pages */
+main {
+    padding: 2rem;
+    text-align: left;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #f8f8f8;
+    color: black; /* Default color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+body.light-mode main {
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid #d0d0d0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+body.dark-mode main {
+    background-color: #16213e;
+    color: white;
+}
+
+.content-section {
+    margin-top: 1rem;
+    color: black;
+}
+body.light-mode .content-section {
+    color: black;
+}
+main h1 {
+    color: black;
+}
+body.light-mode main h1 {
+    color: black;
+}
+main p, main ul {
+    color: black;
+}
+body.dark-mode main p, body.dark-mode main ul {
+    color: white;
+}
+
+/* Login button style */
+button {
+    margin: 0 1rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #53354a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+body.light-mode button {
+    color: black;
+    background-color: #e0e0e0;
+}
+button:hover {
+    background-color: #903749;
+}
+body.light-mode button:hover {
+    background-color: #c0c0c0;
+}
