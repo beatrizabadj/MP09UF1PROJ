@@ -16,7 +16,7 @@ h1 {
     font-size: 3rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #ff79c6; /* Color retro para el título */
+    color: #ff79c6; 
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 0 0 25px #ff79c6, 0 0 5px #ff79c6; /* Efecto de sombra de texto */
     animation: pulseTitle 2s infinite alternate; /* Animación de pulso para el título */
 }
@@ -32,7 +32,7 @@ body {
     color: #f8f8f2;
     background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
     background-repeat: repeat;
-    animation: fadeIn 2s ease-out; /* Animación para toda la página */
+    animation: fadeIn 2s ease-out; 
     margin-bottom:40px;
   }
   

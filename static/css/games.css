@@ -1,12 +1,15 @@
 @import url('https://fonts.cdnfonts.com/css/press-start');
 
 body, html{
+  font-family: 'Press Start', sans-serif;
   height:100%;
+  margin:0;
   padding:0;
 }
+
 body {
-    margin: 0;
-    font-family: 'Press Start',  sans-serif;
+    display:flex;
+    flex-direction:column;
     text-align: center;
     background-color: #2b2b2b;
     color: #f8f8f2;
@@ -144,6 +147,12 @@ body {
   body.light-mode .content-section li {
     color: #f8a9ff;
     box-shadow: 2px white;
+  }
+
+  .content-section li:hover {
+    transform: scale(1.05);
+    background-color: #f7c9e35e;
+    color: #ff79c6;
   }
   
   footer {
