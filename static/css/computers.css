@@ -87,9 +87,18 @@ main {
   animation: fadeIn 2s ease-out forwards;
 }
 
+main p{
+  display:inline-block;
+  overflow:hidden;
+  animation: typing 2.5s steps(30, end), blink-caret 0.1s step-end infinite;
+  width:100%;
+  color: #ffffff;
+  background-color: #a3437c82;
+}
+
 body.light-mode main {
   background-color: #ffffff;
-  color:  #e4bde8;
+  color:  #e279ee;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -99,7 +108,7 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
   color: #ff79c6;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 0 0 25px #ff79c6, 0 0 5px #ff79c6;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.897), 0 0 25px #ff79c6, 0 0 5px #ff79c6;
   animation: pulseTitle 2s infinite alternate;
 }
 
@@ -114,6 +123,20 @@ h1 {
   }
 }
 
+
+@keyframes typing {
+  from { width: 0}
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff79c6;
+  }
+}
 .content-section {
   margin-top: 2rem;
 }
@@ -138,7 +161,7 @@ body.light-mode .content-section li {
 .content-section li:hover {
   transform: scale(1.05);
   background-color: #e4c8d89f;
-  color: #2b2b2b;
+  color: #ff79c6;
 }
 
 body.light-mode footer {
