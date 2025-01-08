@@ -1,43 +1,40 @@
-@import '_variables';
+@use './variables';
 
 body {
+  font-family: variables.$font-family;
+  height: 100%;
   margin: 0;
-  font-family: $font-family;
-  text-align: center;
-  background-color: $color-dark-background;
-  color: $color-light-text;
-  background-image: url($background-image-url);
+  padding: 0;
+  background-color: variables.$color-bg-dark;
+  color: variables.$color-text-light;
+  background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
   background-repeat: repeat;
-  animation: fadeIn $fade-in-duration ease-out;
-}
-
-body h1 {
-  font-size: $font-size-title;
+  animation: fadeIn 1s ease-out;
 }
 
 body.light-mode {
-  background-color: $color-light-background;
-  color: $color-light-background;
+  background-color: variables.$color-bg-light;
+  color: variables.$color-text-dark;
   background-image: none;
 }
 
 header {
-  font-size: $font-size-header;
+  font-size: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $padding-header;
-  background-color: $color-header-background;
-  box-shadow: $shadow-dark;
-  background-image: url($kingkong-gif-url); /* Optional gif background */
+  padding: variables.$padding-base variables.$padding-large;
+  background-color: variables.$color-border;
+  box-shadow: variables.$box-shadow;
+  background-image: url('../img/kingkong.gif');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 body.light-mode header {
-  background-color: $color-light-background;
-  border-bottom-color: $color-light-text;
+  background-color: variables.$color-bg-light;
+  border-bottom-color: variables.$color-border;
 }
 
 header nav {
@@ -48,14 +45,14 @@ header nav {
 }
 
 header a {
-  color: $color-light-text;
+  color: variables.$color-text-light;
   text-decoration: none;
-  font-size: $font-size-main;
+  font-size: variables.$font-size-base;
   transition: color 0.3s ease;
 }
 
 body.light-mode header a {
-  color: $color-light-background;
+  color: variables.$color-text-dark;
 }
 
 .nav-icons {
@@ -69,91 +66,65 @@ body.light-mode header a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: $nav-icon-size;
-  height: $nav-icon-size;
-  background-color: #6272a4;
+  width: 40px;
+  height: 40px;
+  background-color: variables.$color-nav-icon;
   border-radius: 50%;
   transition: background-color 0.3s ease;
 }
 
 body.light-mode .nav-icons .icon {
-  background-color: $color-light-text;
+  background-color: variables.$color-nav-icon-light;
 }
 
 main {
-  padding: $padding-main;
+  padding: variables.$padding-large;
   text-align: left;
-  max-width: 800px;
+  max-width: variables.$max-width-main;
   margin: 2rem auto;
-  background-color: $color-header-background;
-  color: $color-light-text;
-  border-radius: $border-radius;
-  box-shadow: $shadow-dark;
+  background-color: variables.$color-main-bg;
+  color: variables.$color-text-light;
+  border-radius: variables.$border-radius-large;
+  box-shadow: variables.$box-shadow;
   opacity: 0;
   animation: fadeIn 2s ease-out forwards;
-  background-image: url($tetris-gif-url);
+  background-image: url('../img/tetris.gif');
   background-size: contain;
 }
 
 body.light-mode main {
-  background-color: $color-light-background;
-  color: $color-light-text;
-  box-shadow: $shadow-light;
+  background-color: variables.$color-main-bg-light;
+  color: variables.$color-text-dark;
+  box-shadow: variables.$box-shadow-light;
 }
 
 h1 {
-  font-size: $font-size-title;
+  font-size: variables.$font-size-header;
   font-weight: bold;
   text-transform: uppercase;
-  color: $color-accent;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 0 0 25px $color-accent, 0 0 5px $color-accent;
-  animation: pulseTitle $pulse-title-duration infinite alternate;
-}
-
-.content-section {
-  margin-top: 2rem;
-}
-
-.content-section ul {
-  list-style-type: none;
-  padding: 0;
+  color: variables.$color-accent;
+  text-align: center;
+  text-shadow: variables.$text-shadow;
+  animation: pulseTitle 2s infinite alternate;
 }
 
 .content-section li {
-  font-size: $font-size-main;
-  color: $color-light-text;
-  margin-bottom: 1rem;
-  text-shadow: $shadow-text;
   opacity: 0;
-  animation: fadeInList $fade-in-list-duration ease-out forwards;
+  animation: fadeInList 1s ease-out forwards;
 }
 
-body.light-mode .content-section li {
-  color: $color-light-text;
+.content-section li:nth-child(1) {
+  animation-delay: 0.5s;
 }
 
-footer {
-  font-size: $font-size-footer;
-  padding: $padding-footer;
-  margin-top: 2rem;
-  background-color: $color-footer-background;
-  text-align: center;
-  border-top: 4px solid $color-accent;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+.content-section li:nth-child(2) {
+  animation-delay: 1s;
 }
 
-footer a {
-  color: $color-accent;
-  text-decoration: none;
-  transition: color 0.3s ease;
+.content-section li:nth-child(3) {
+  animation-delay: 1.5s;
 }
 
-footer a:hover {
-  color: $color-accent-hover;
-}
-
-body.light-mode footer {
-  background-color: $color-light-background;
-  color: $color-dark-text;
-  border-top-color: $color-light-text;
+.content-section li:nth-child(4) {
+  animation-delay: 2s;
 }

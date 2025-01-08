@@ -1,106 +1,123 @@
-@import 'variables';
+@use './variables' as variables;
 
 body {
   margin: 0;
-  font-family: $font-family;
+  font-family: variables.$font-family;
   text-align: center;
-  background-color: $color-dark-background;
-  color: $color-light-text;
-  background-image: url($background-image-url);
+  background-color: variables.$color-bg-dark;
+  color: variables.$color-text-light;
+  background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
   background-repeat: repeat;
-  animation: fadeIn $fade-in-duration ease-out;
+  animation: fadeIn 1s ease-out;
 }
 
-body h1 {
-  font-size: $font-size-title;
+body.light-mode {
+  background-color: variables.$color-bg-light;
+  color: variables.$color-text-dark;
+  background-image: none;
 }
 
 header {
-  font-size: $font-size-header;
+  font-size: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $padding-header;
-  background-color: $color-header-background;
-  box-shadow: $shadow-dark;
-  background-image: url($kingkong-gif-url); /* Optional gif background */
+  padding: 1rem 2rem;
+  box-shadow: variables.$box-shadow;
+  background-image: url('../img/kingkong.gif');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-header nav {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  gap: 1rem;
-}
-
-header a {
-  color: $color-light-text;
-  text-decoration: none;
-  font-size: $font-size-main;
-  transition: color 0.3s ease;
-}
-
-.nav-icons {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-left: 1rem;
+body.light-mode header {
+  color: variables.$color-text-dark;
+  border-bottom-color: variables.$color-border;
 }
 
 .nav-icons .icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: $nav-icon-size;
-  height: $nav-icon-size;
-  background-color: #6272a4;
+  width: 40px;
+  height: 40px;
+  background-color: variables.$color-nav-icon;
   border-radius: 50%;
   transition: background-color 0.3s ease;
 }
 
+body.light-mode .nav-icons .icon {
+  background-color: variables.$color-nav-icon-light;
+}
+
 main {
-  padding: $padding-main;
+  padding: 2rem;
   text-align: left;
-  max-width: 800px;
-  margin: 2rem auto;
-  background-color: $color-header-background;
-  color: $color-light-text;
-  border-radius: $border-radius;
-  box-shadow: $shadow-dark;
+  max-width: variables.$max-width-form;
+  margin: 4rem auto;
+  background-color: variables.$color-main-bg;
+  color: variables.$color-text-light;
+  border-radius: variables.$border-radius-large;
+  box-shadow: variables.$box-shadow;
   opacity: 0;
   animation: fadeIn 2s ease-out forwards;
-  background-image: url($tetris-gif-url);
-  background-size: contain;
+}
+
+body.light-mode main {
+  background-color: variables.$color-main-bg-light;
+  color: variables.$color-text-dark;
+  box-shadow: variables.$box-shadow-light;
 }
 
 h1 {
-  font-size: $font-size-title;
+  font-size: variables.$font-size-title;
   font-weight: bold;
   text-transform: uppercase;
-  color: $color-accent;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5), 0 0 25px $color-accent, 0 0 5px $color-accent;
-  animation: pulseTitle $pulse-title-duration infinite alternate;
+  color: variables.$color-accent;
+  text-shadow: variables.$text-shadow;
+  animation: pulseTitle 2s infinite alternate;
 }
 
-footer {
-  font-size: $font-size-footer;
-  padding: $padding-footer;
-  margin-top: 2rem;
-  background-color: $color-footer-background;
-  text-align: center;
-  border-top: 4px solid $color-accent;
-  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+form {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$form-gap;
+  text-align: left;
+  padding: variables.$padding-base;
 }
 
-footer a {
-  color: $color-accent;
-  text-decoration: none;
-  transition: color 0.3s ease;
+label {
+  font-size: variables.$font-size-medium;
+  font-weight: bold;
+  color: variables.$color-text-light;
 }
 
-footer a:hover {
-  color: $color-accent-hover;
+input {
+  padding: 0.8rem;
+  font-size: variables.$font-size-base;
+  border: 2px solid variables.$color-form-border;
+  border-radius: variables.$border-radius;
+  background-color: variables.$color-main-bg;
+  color: variables.$color-input-text;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: variables.$color-accent;
+  outline: none;
+}
+
+button {
+  padding: 1rem;
+  background-color: variables.$color-button-bg;
+  border: none;
+  color: variables.$color-button-text;
+  font-size: variables.$font-size-medium;
+  border-radius: variables.$border-radius;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: variables.$color-button-bg-hover;
 }
