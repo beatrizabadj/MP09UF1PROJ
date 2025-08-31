@@ -212,6 +212,9 @@ body.light-mode button:hover {
 
 
 footer {
+  position:fixed;
+  bottom:0;
+  width: 100%;
   padding: 1rem;
   background-color: #44475a;
   color: #f8f8f2;
