@@ -42,7 +42,7 @@ body.light-mode header {
 header nav {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  /* margin-left: auto; */
   gap: 1rem;
 }
 
@@ -55,7 +55,7 @@ body.light-mode header a {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
 }
 
 .nav-icons .icon {
@@ -90,7 +90,7 @@ main {
 main p{
   display:inline-block;
   overflow:hidden;
-  animation: typing 2.5s steps(30, end), blink-caret 0.1s step-end infinite;
+  /* animation: typing 2.5s steps(30, end), blink-caret 0.1s step-end infinite; */
   width:100%;
   color: #ffffff;
   background-color: #a3437c82;
@@ -124,10 +124,10 @@ h1 {
 }
 
 
-@keyframes typing {
+/* @keyframes typing {
   from { width: 0}
   to { width: 100% }
-}
+} */
 
 @keyframes blink-caret {
   from, to {
@@ -171,9 +171,9 @@ body.light-mode footer {
 
 
 footer {
-  position:fixed;
+  position:absolute;
   bottom:0;
-  width: 100%;
+  width: 100vw;
   font-size: 10px;
   padding: 1rem;
   margin-top:2rem;

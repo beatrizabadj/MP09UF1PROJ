@@ -418,7 +418,6 @@ body.light-mode footer {
     }
   }
 footer {
-  position:fixed;
     bottom:0;
     width: 100%;
     font-size: 10px;
@@ -883,7 +882,6 @@ footer a:hover {
 
 
 footer {
-  position:fixed;
   bottom:0;
   width: 100%;
   font-size: 10px;
